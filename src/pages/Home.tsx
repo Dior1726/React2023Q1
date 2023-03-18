@@ -3,9 +3,9 @@ import SearchBar from '../components/SearchBar';
 
 const Home = () => {
   return (
-    <div className="home">
-      <div className="container">
-        <h3 className="search-bar__title">RS School Powered Search</h3>
+    <div className="flex-grow flex justify-center items-center flex-col ">
+      <div className="bg-white bg-opacity-20 p-20 rounded-2xl">
+        <h3 className="mb-10 text-center font-semibold text-lg">RS School Powered Search</h3>
         <SearchBar />
       </div>
     </div>
