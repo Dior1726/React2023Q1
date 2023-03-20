@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
 
-const SearchBar = ({ setSearchList }) => {
+interface ISearchBarProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  setSearchList: (params: any) => void;
+}
+
+const SearchBar = ({ setSearchList }: ISearchBarProps) => {
   const [search, setSearch] = useState('');
 
   const searchHandler = () => {
-    // let searchList = null;
-    // searchList = JSON.parse(localStorage.getItem('searchList') || '');
-
-    // if (searchList !== null) {
-    //   searchList.push(search);
-    //   localStorage.setItem('searchList', JSON.stringify(searchList));
-    // } else {
-    //   searchList = [search];
-    //   localStorage.setItem('searchList', JSON.stringify(searchList));
-    // }
     if (search !== '') {
       setSearchList((oldVal: string[]) => [...oldVal, search]);
 

@@ -3,7 +3,7 @@ import SearchBar from '../components/SearchBar';
 import useLocalStorage from '../hooks/useLocalStorage';
 
 const Home = () => {
-  const [searchList, setSearchList] = useState([]);
+  const [searchList, setSearchList] = useState<string[]>([]);
   const [storedVal, setStoredVal] = useLocalStorage<string[]>('searchList', searchList);
 
   useEffect(() => {
