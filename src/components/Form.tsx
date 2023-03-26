@@ -34,7 +34,6 @@ class Form extends React.Component<{}, FormState> {
     const select = data.get('select') as string;
     const date = data.get('date') as string;
     const checkbox = data.get('checkbox') !== null;
-    const radio = data.get('radio') !== null;
 
     const errorFields: string[] = [];
 
