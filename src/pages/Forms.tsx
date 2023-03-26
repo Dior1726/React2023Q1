@@ -1,16 +1,33 @@
+import Form from '../components/Form';
 import React, { Component } from 'react';
 
 class Forms extends Component {
   constructor(props: Record<string, never>) {
     super(props);
+    this.state = {
+      results: [
+        {
+          name: 'Den',
+          date: '2023-03-12',
+          checkbox: true,
+          radio: 'male',
+          select: 'option1',
+        },
+        {
+          name: 'Ben',
+          date: '2023-03-12',
+          checkbox: true,
+          radio: 'male',
+          select: 'option1',
+        },
+      ],
+    };
   }
 
   render() {
     return (
-      <div className="flex-grow flex-col ">
-        <div className="bg-white bg-opacity-20 p-20 rounded-2xl max-w-2xl w-full mx-auto">
-          <h3 className="text-center font-semibold text-lg">Forms Page</h3>
-        </div>
+      <div className="flex-grow flex-col">
+        <Form />
       </div>
     );
   }
