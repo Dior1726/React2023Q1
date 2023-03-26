@@ -18,6 +18,9 @@ class Header extends Component {
           <NavLink to={'/about'} className={({ isActive }) => (isActive ? 'text-green-500' : '')}>
             About
           </NavLink>
+          <NavLink to={'/forms'} className={({ isActive }) => (isActive ? 'text-green-500' : '')}>
+            Forms
+          </NavLink>
         </nav>
       </header>
     );
